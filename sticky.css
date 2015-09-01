@@ -1,0 +1,114 @@
+/*
+// Sticky v1.0 by Daniel Raftery
+// http://thrivingkings.com/sticky
+// http://twitter.com/ThrivingKings
+// Adapted by Joris de Ruiter: now bigger, more responsive, and added class .sticky-wide
+// Example call: $.sticky("Hello here is a bigger stickier message", {autoclose: 3000, position: "top-right", type: "st-success sticky-wide" });
+*/
+div.sticky-queue {
+    position: fixed;
+    background: #fff;
+    border-width: 0 1px 1px;
+    border-color: #bbb;
+    border-style: solid;
+    z-index: 989;
+    overflow: hidden;
+}
+
+div.sticky-note {
+    padding: 20px 20px 20px 14px;
+    font-weight: 700
+}
+
+div.sticky {
+    width: 320px;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #333;
+    display: none;
+    position: relative;
+    padding: 10px;
+    min-height: 50px;
+}
+div.sticky.sticky-wide {
+    width: 500px;
+}
+
+@media screen and (max-width: 450px) {
+    div.sticky { width: 320px; }
+    div.sticky.sticky-wide { width: 320px; }
+}
+
+@media screen and (min-width: 450px) and (max-width: 767px) {
+    div.sticky { width: 320px; }
+    div.sticky.sticky-wide { width: 450px; }
+}
+
+@media screen and (min-width: 768px) {
+    div.sticky { width: 526px; }
+    div.sticky.sticky-wide { width: 768px; }
+}
+@media screen and (min-width: 1200px) {
+    div.sticky.sticky-wide {
+        width: 800px;
+    }
+}
+
+div.sticky p {
+    margin-bottom: 0
+}
+
+.st-close {
+    position: absolute;
+    top: 4px;
+    right: 9px
+}
+
+.top-right, .top-left, .top-center {
+    top: 34px
+}
+
+.bottom-right, .bottom-left {
+    bottom: -2px
+}
+
+.border-top-right, .border-top-left, .border-top-center {
+    border-top: 1px solid #eee;
+    border-top: 1px solid rgba(0, 0, 0, .1)
+}
+
+.border-bottom-right, .border-bottom-left {
+    border-top: 1px solid #bbb
+}
+
+.sticky.st-error,
+.sticky.st-success,
+.sticky.st-info {
+    position: relative;
+}
+
+.sticky.st-error::before,
+.sticky.st-success::before,
+.sticky.st-info::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 90%;
+    top: 5%;
+    left: 2px;
+}
+
+.sticky.st-error { color: #C62626 }
+.sticky.st-error::before { background-color: #C62626 }
+.sticky.st-success { color: #7fae00 }
+.sticky.st-success::before { background-color: #7fae00 }
+.sticky.st-info { color: #00a6fc }
+.sticky.st-info::before { background-color: #00a6fc }
+.top-right, .bottom-right { right: 20px }
+.top-left, .bottom-left { left: 20px }
+
+.top-center {
+    left: 50%;
+    margin-left: -140px
+}
