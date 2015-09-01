@@ -1,22 +1,26 @@
 # Sticky notifications
 Adding Bootstrap-like Sticky notifications on top of your webpage
 
+See showcase.png for demo
+
 Options: 
-* duration 
-* info, warning, error, success message (color)
-* stacking behaviour of notifications
+* Duration;
+* Colors: Info, warning, error, success message;
+* Stacking behaviour of notifications
 
 # Original: 
 
-* http://danielraftery.com/read/Sticky-A-super-simple-notification-system-for-jQuery
-* https://github.com/ThrivingKings/Sticky
+https://github.com/ThrivingKings/Sticky
 
-He went through several design iterations, the one his webpage looks very different now. 
+http://danielraftery.com/read/Sticky-A-super-simple-notification-system-for-jQuery
+
+He wrote it. Thanks goes to him. He went through several design iterations.
+
+I like this version best.
 
 # Improvements
 
-* Bigger font, wider notication
-* sticky-wide class
+* Bigger font, bigger notification
+* Added a .sticky-wide class for extra width
 * Responsiveness
-
 
